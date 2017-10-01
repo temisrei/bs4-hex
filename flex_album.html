@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-Hang-TW">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <title>Bootstrap 4 - Album Layout with Flex</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', "Microsoft JhengHei", Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .box {
+      height: 300px;
+      background-color: #7952b3;
+      color: #ffffff;
+      border: 1px solid #ffffff;
+    }
+    .bg-cover {
+      background-size: cover;
+      background-position: center center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+  <div class="container-fluid mt-3">
+
+    <h1 class="my-5">Album Layout with Flex</h1>
+    <div class="row">
+      <div class="col-4 box bg-cover" style="background-image: url('https://lh3.googleusercontent.com/MV9F3OL6HNxDNV5QYGZO5x9giRBXwZT4ebrM-VO8rCQgaSt-Hu7eVBTkZMG-dwREfjAmN0oMms1aw_D_5j93tey0VObX0lbpPqQK9jk4ejnAu0afpPY2TtIdteC5ES1iSegQ3HmQAFzYj4Lr-RzgzBfMrMu91jEkqWx94r2QPBQtV3ZvGNz2fHUPcWN2-WcVS06AtoCRDB2Po1Qeh4fWp5T7MzqcLTKPXMYqi_BRz0ARWXGHjyRpHlAd2wyJrvVWqHWXcxszGjFT1ntP2yTPA0abFCuhbFJK1jeqXf8-sMzaiTH0DAYn19151weW-gB2kg3iJL7IRKHH-0EKAmZ3s7JrM3Gfuc6WnX7hy80L9W1ChzYlll88Ywj3YGE2klGkkgfPWBRUKrG1Y7pCtYJ2hFWxshqzwpRnoGU4jiblL5yWQro9ecTpV2Ju0fBDVKp5cQp8THmZ7tDtD3Pk_1YkR_u7IBwmFXMhTPEoo-2VBaWACL5oekSDmLZnXKI8n2y7A6xFX3wshQhFTxzjJnkMWGfjUrppYP3Vhby22XPkOoxpKy811l0Nf8dg-MZHmXQk2oWE3jS7Y3caNUTsqQXOlE_F85OxmPtG4fQ9tpiQDlQ5YbsPD4WdWoLpewoZTxS2fuwmNq0Lm5t3Ex7lGyKvnnpjme9ThTgJHMzs=w2348-h1360-no')"></div>
+      <div class="col-4 box bg-cover" style="background-image: url('https://lh3.googleusercontent.com/O_1vat_ZRt9vbQllU5Sr9NvpdCOUvY9W-8Ok37vfXvFVY5VzLMjLw51VPk90TwNfdfPswm1m3UgZabkUS3HpElVzwlwOXTKFwKeFZts3CoETD3kb5zHvPb3frzilvlJoJVPf4XSLegSIr0E1d9SQtcejyIJ-iTVLY959cWlN1bqMV4dKM7Pyn6wa_EJwTwltE5_kRwEeoXCq31BrC4MPANvOVN7BeaNdjpVLB2Q4thHpLonmaabGq41KMXc8G1sUoTfFNJuz9gpggm_xHxfnTlabG-23ljHyYjW8YXUg4tbHiCOBx8Hy17-repNxbur-Hpyik9mRs3tRMJzl6gv0j2zjqMN3QhWx78_DrvKXXyDOQ9XQIqqz1V5vKju7LwGxmzOb8eQ6p_FiL6k-c6ru48jb_dgxY5hxrrSZkRvQWDtedRLZKuGTZtlDeQetvHpQ7_spUMfGd9z2N5kle4jEepL3ulqb7BrR04MJWotqDDsLPIhQ-btlug7XOZcXOJyCeP0zUsf8A8TRp9TULONup9s890mcADGachxYRwuBKWRbWw5ck4Cn-dBd613GlOpIkHtxCRNTj1IwRYIaaRsI9lcYfeDPdFOlYnq-b9P7MU61hhw0Z9OPzVhXDrKd_C_Fa5sgo7UZqOw9RRW6oKouRwXVRRsCB-YGJPIu=w1818-h1360-no')"></div>
+      <div class="col-4 box bg-cover" style="background-image: url('https://lh3.googleusercontent.com/9WzGfOiYj9nt4sq26ogxRnod6rGFSfQHNqZsclx-nY66dE4HvXftSZMgFfXUHqpXq75D74K45T5XuyUW6f2dekAYApfobBz7my8rUaArapYL1z23M1VNzdY5-2Hd4DRMbKCXo_sVxOM=w2044-h1360-no')"></div>
+    </div>
+    <div class="row" style="height: 100vh">
+      <div class="col-8 bg-cover" style="background-image: url('https://lh3.googleusercontent.com/cH5ZzAcTi0l7c9KjznWPAi7G0JO5-jFPj_DZ6KTUs4X__KbUvRUqIPDinEIEJwBu6JRHfoS36y19QmbVFJavYP1WNNsqu4ZP2ZD3twiBfohyi-f8k9CjK2I85uWSz7v628MIKHd8G9ASk2k_Ikx5e_iaxFGbBCs9sWjAU7RPiNZAumpFs6dS2SMpos5dBCiWaajqqnV1KRVeGnLqUTSbvL1vq9GN9spuIhI1wseMpX_MVQwZR0hshbZgaH2GWdR3AVD3mSffRbKICgU_ZFC0PgrAe3ye6ga25WfWyfF3HIxlDMDINOUdW8Hit8PWULnICWdjLb3ppbn-nzkxWVLMn1ZsUsYqPFDAYndWSOR8c5mPNqfULtQPnPKW-Ae-19IW3xV5hvLBELF5YAeday0tMrLrUST5BWvGnHl19nj7S4QV1MMLihKWNJzxFav6tvN5FTU0hTOIUDyoh3T3BR6g7-VKrIsJjQuCpxVPqWS8R3YA_AzW0kgGv0c2F9kHOrMQ5xCWntSt_2GDERktt9RVXuHhtwFF9dXFXaKW78t9C82HE1raB_CV5D0DZtYpEhEdqngMSDnAZldM9wE1hhSMpZd1-UfchaH4xx0alx6QMFFB_ZfTByfVho_WZbjI5G8N7CaO0GZUAiKoeTAvmUfVgbuSWUD3eN0h91zv=w2044-h1360-no')"></div>
+      <div class="col-4">
+        <div class="row d-flex flex-column h-100">
+          <div class="h-50 bg-cover" style="background-image: url('https://lh3.googleusercontent.com/kVgxyRvyoWEGd2rSKjW5QVIiFDL868POlAV_7Tz_AUZbsbtUhYnYt7zM8SOID6eCmfrehqri-Ibv6lSOegtJ_bMs4AGIOzjlyeWHaHv98ai2tCNRONT_OCpBO83WGubRKc1EHfri5lfBWMEBLHQiu7SUoeYjU8ztNN4aB-Jgs7gtSJiRWKQzaQ5Q1WdTwVfvvggHDy9qNmmM58apTY1OE5ecFEuDpjMPqLKTHsPwXQO_B96vV_vuY5qw_1aLje3naxXOUI7Vbnp2txttoe7sHFrliWh0wpy3U-XsZNWTPWscYepo3MkR1T2q9LbvpmQNhKDh4rTdCXGu65quxnWFBJg4HAqgH4ZmSpw_UxPBrhuD3E61JKAqQFdB0hYRhBa4cJ1yDb-_LHMdodZeZ5C82rW_jbdOh5T-LIew1A24bO-OFrXbA7nrqwtmhdHJ7-3TjsGkX3YIvJzV6qmnfXzmQbhG8O50nTP0kFDGBIUOX7SQ0HxzcQ5yhMeOpB3FtjJjd50p3BB_mBBJVRRaCIlMBPFESS9qpeHFxVzRjf0A6IzNTjQw0SjOjzMF0tXlCtZgvNJ16vn0XhRSSf4D6OVrMY12_cH9Dw48GXYkuNzeqvFql_TQjlyIENdXrDYOu4go5ImZFHqB4hMqkMDBuknhA-ePtsk3Utn3rO3-=w2276-h1360-no')"></div>
+          <div class="h-50 bg-cover" style="background-image: url('https://lh3.googleusercontent.com/ehTpTX861vkGRDoG7OFZOucVs_6izXPOdrwd0M-nIxYyM4OFA7S6wfaJUGWQFa-U0e7uI6G5UQGrY4_xFreBHLgJ5LNxwD5njhX2XO3xn3_8GgLOeWZ1DrryqifAS7Ya0fUlz5pmYbWK7wTF5NFmLaPR9Sp-V2ZfUxUcYsLe3waTK-u3d2pZNki08LHS747-I4QtucP2VpYHocuuB6UgDaPWJGfud-FNBOpfkimWfn9X3Sr6JvqyypXYL-3-DULEI57sGFAe-jV2awWcygT8A36C70lWkvgAcy7zuR7qYe5YQswn4efkXqytZYyHZtIco-2L66PdZCOCFnvwVUPjAZv2SBCe86aRqszHCS41EmOuRzBWU39M4C6of3PFN-Kcz05cB-SycQVG-P_2XyYBk482XG--hAnRQ9DDbj9uKhiPVFJy-Nrb8lW1ZuD3yf2OrNcApzCn3D1Raxy1grOKJ_z5Pe8grmyTQMVLIXY5w0iHa7xWA4i0ZrfzUwjugE_0H4bx-myBvfq3kgxDjnypWkwSGVU4UQqVffaDE_8IVA0zvHpdyGdlBbraXKW3GNhmRM8HcP2SwAEq8tXdC7qWDq7LDNN1-uyKi6zNrbvHOGXwIbaDBZcdQVZhp8qApiTJIqUBqwwJpvfGaP08uF2R9PDC_h-AuYVwJKIO=w2454-h1090-no')"></div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
