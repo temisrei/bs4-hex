@@ -27,9 +27,52 @@
       font-size: 2rem;
     }
 
-    .bg-cover {
-      background-size: cover;
-      background-position: center center;
+    .timeline-section {
+      position: relative;
+    }
+
+    .timeline-section::after {
+      content: '';
+      position: absolute;
+      background-color: #CCC;
+
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      /* 置中 */
+      transform: translateX(-50%);
+      /* 補正 生長寬度以置中起始往右 需回推左側這個寬度的 50% */
+      width: 3px;
+    }
+
+    .timeline-pointer {
+      position: relative;
+    }
+
+    .timeline-pointer::after {
+      content: '';
+      position: absolute;
+      background-color: #fff;
+
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      /* 置中 */
+      transform: translateX(-50%);
+      /* 補正 生長寬度以置中起始往右 需回推左側這個寬度的 50% */
+      width: 10px;
+      height: 10px;
+
+      border: 3px solid #ccc;
+      border-radius: 50%;
+      z-index: 1;
+    }
+
+    @media (max-width: 575px) {
+      .timeline-section::after,
+      .timeline-pointer::after {
+        display: none;
+      }
     }
   </style>
 
@@ -39,87 +82,88 @@
   <div class="container-fluid mt-3">
 
     <h1 class="my-5">Time Line with Flex</h1>
-    <div class="row my-3">
-      <div class="col-sm-6">
-        <h3>標題 1</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
+    <div class="timeline-section">
+      <div class="row my-3 timeline-pointer">
+        <div class="col-sm-6">
+          <h3>標題 1</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div class="box">Image 1</div>
+        </div>
       </div>
-      <div class="col-sm-6">
-        <div class="box">Image 1</div>
+      <div class="row my-3 flex-sm-row-reverse timeline-pointer">
+        <div class="col-sm-6">
+          <h3>標題 2</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div class="box">Image 2</div>
+        </div>
+      </div>
+      <div class="row my-3 timeline-pointer">
+        <div class="col-sm-6">
+          <h3>標題 3</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div class="box">Image 3</div>
+        </div>
+      </div>
+      <div class="row my-3 flex-sm-row-reverse timeline-pointer">
+        <div class="col-sm-6">
+          <h3>標題 4</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div class="box">Image 4</div>
+        </div>
+      </div>
+      <div class="row my-3">
+        <div class="col-sm-6">
+          <h3>標題 5</h3>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
+            ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium
+            provident harum!
+          </p>
+        </div>
+        <div class="col-sm-6">
+          <div class="box">Image 5</div>
+        </div>
       </div>
     </div>
-    <div class="row my-3 flex-sm-row-reverse">
-      <div class="col-sm-6">
-        <h3>標題 2</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <div class="box">Image 2</div>
-      </div>
-    </div>
-    <div class="row my-3">
-      <div class="col-sm-6">
-        <h3>標題 3</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <div class="box">Image 3</div>
-      </div>
-    </div>
-    <div class="row my-3 flex-sm-row-reverse">
-      <div class="col-sm-6">
-        <h3>標題 4</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <div class="box">Image 4</div>
-      </div>
-    </div>
-    <div class="row my-3">
-      <div class="col-sm-6">
-        <h3>標題 5</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus excepturi earum perferendis. Facilis explicabo
-          ut a optio velit perspiciatis laboriosam excepturi obcaecati quo. Possimus voluptatum aut incidunt laudantium provident
-          harum!
-        </p>
-      </div>
-      <div class="col-sm-6">
-        <div class="box">Image 5</div>
-      </div>
-    </div>
-
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
