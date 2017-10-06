@@ -7,16 +7,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .breadcrumb {
+      background-color: transparent;
+    }
+
+    .text-rgy {
+      color: #D0104C !important;
+    }
+  </style>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #D0104C;">
-    <a class="navbar-brand" href="#"><i class="fa fa-rebel mx-3" aria-hidden="true"></i>RGY Blog</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-      aria-label="Toggle navigation">
+    <a class="navbar-brand" href="#">
+      <i class="fa fa-rebel mx-3" aria-hidden="true"></i>RGY Blog</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -33,14 +41,92 @@
     </div>
   </nav>
 
+  <div class="container">
+
+    <!-- Breadcrumb -->
+    <ol class="breadcrumb pl-0">
+      <li class="breadcrumb-item">
+        <a href="#" class="text-rgy">Home</a>
+      </li>
+      <li class="breadcrumb-item">
+        <a href="#" class="text-rgy">Library</a>
+      </li>
+      <li class="breadcrumb-item active">Data</li>
+    </ol>
+
+    <!-- Head 1 -->
+    <h1 class="text-rgy">Joomla! 3.8.1 Release</h1>
+
+    <!-- Grid System 2 Column: -8-4-  -->
+    <div class="row">
+      <div class="col-md-8">
+
+        <!-- Left(Primary) Section -->
+        <div class="my-3 text-secondary">
+          <span class="mr-3">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            Rei Lin
+          </span>
+          <span class="mr-3">
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            2017/10/06
+          </span>
+          <span class="mr-3">
+            <i class="fa fa-tags" aria-hidden="true"></i>
+            News
+          </span>
+        </div>
+
+        <img class="mb-5 img-fluid" src="https://www.joomla.org/images/release-images/joomla-381.jpg" alt="">
+
+        <p>Joomla! 3.8.1 is now available. This is a bug fix release for the 3.x series of Joomla fixing bugs which were reported after the 3.8.0 release.</p>
+        <h2 class="text-secondary">What's in Joomla! 3.8.1?</h2>
+        <p>Joomla! 3.8.1 addresses several bugs reported after the 3.8.0 release, including:</p>
+        <ul>
+          <li>Fix handling of image srcset attribute
+            <a href="https://github.com/joomla/joomla-cms/pull/17978" target="_blank">#17978</a>
+          </li>
+          <li>Some plugin events were triggered multiple times
+            <a href="https://github.com/joomla/joomla-cms/pull/18066" target="_blank">#18066</a>
+          </li>
+          <li>Redirect plugin not redirecting correctly
+            <a href="https://github.com/joomla/joomla-cms/pull/17997" target="_blank">#17997</a>
+          </li>
+          <li>Removed checks causing some admin menu items to be hidden
+            <a href="https://github.com/joomla/joomla-cms/pull/18156" target="_blank">#18156</a>
+          </li>
+          <li>LDAP login broken
+            <a href="https://github.com/joomla/joomla-cms/pull/17989" target="_blank">#17989</a>
+          </li>
+        </ul>
+        <p>Visit GitHub for the full list of
+          <a href="https://github.com/joomla/joomla-cms/milestone/26?closed=1" target="_blank">bug fixes</a>.</p>
+      </div>
+
+      <!-- Right(Secondary) Section -->
+      <div class="col-md-4">
+        <h2 class="text-secondary">Tags</h2>
+        <a href="#" class="badge badge-info">
+          <i class="fa fa-tag" aria-hidden="true"></i>
+          News
+        </a>
+        <a href="#" class="badge badge-info">
+          <i class="fa fa-tag" aria-hidden="true"></i>
+          Features
+        </a>
+        <a href="#" class="badge badge-info">
+          <i class="fa fa-tag" aria-hidden="true"></i>
+          Contributes
+        </a>
+      </div>
+    </div>
+  </div>
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
-    crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 </body>
 
 </html>
