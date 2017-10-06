@@ -25,7 +25,13 @@
     }
 
     .carousel-caption {
-      background-color: rgba(0, 0, 0, 0.6);
+      /* background-color: rgba(0, 0, 0, 0.6); */
+    }
+
+    @media (min-width: 768px) {
+      .text-md-dark {
+        color: #333;
+      }
     }
   </style>
 </head>
@@ -67,8 +73,8 @@
         </ul>
 
         <form class="form-inline my-2 my-lg-0">
-          <a href="#" class="btn btn-outline-danger mr-3">登入</a>
-          <a href="#" class="btn btn-danger">註冊</a>
+          <a href="#" class="btn btn-outline-info mr-3">登入</a>
+          <a href="#" class="btn btn-info">註冊</a>
         </form>
       </div>
     </div>
@@ -115,26 +121,58 @@
   <section class="bg-info py-5 text-light">
     <div class="container">
       <div class="row">
-        <div class="col-md-4 text-center">
+        <div class="col-md-3 text-center">
           <div class="mb-3">
-            <i class="fa fa-globe fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-hand-pointer-o fa-3x" aria-hidden="true"></i>
           </div>
-          <h3>雪山 登山口</h3>
-          <p>海拔約2140公尺的雪山登山口，服務站前的木棧平台視野超遼闊，還有一座小水池倒影如畫，天氣好時將小木屋、山巒、藍天白雲印上，畫面真的超美。
+          <h3>七卡山莊</h3>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-3 text-center">
           <div class="mb-3">
-            <i class="fa fa-sun-o fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-hand-peace-o fa-3x" aria-hidden="true"></i>
           </div>
-          <h3>雪山主峰 日出</h3>
-          <p>3886 公尺的日出</p>
+          <h3>三六九山莊</h3>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-3 text-center">
           <div class="mb-3">
-            <i class="fa fa-picture-o fa-5x" aria-hidden="true"></i>
+            <i class="fa fa-hand-paper-o fa-3x" aria-hidden="true"></i>
           </div>
-          <h3>雪山冰斗 旁側風景</h3>
-          <p>下山途徑在欣賞圈谷(冰斗)的同時，也別忘記注意另一側的山景。</p>
+          <h3>翠池山屋</h3>
+        </div>
+        <div class="col-md-3 text-center">
+          <div class="mb-3">
+            <i class="fa fa-hand-spock-o fa-3x" aria-hidden="true"></i>
+          </div>
+          <h3>瓢單山屋</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container-fluid py-5 bg-light text-white" style="position: relative;">
+      <div class="row">
+        <div class="col-md-5 bg-cover" style="
+          position: absolute; top: 0; bottom: 0;
+          background-image: url('https://lh3.googleusercontent.com/YvkPXYro8IincnbMhTz1Dl-X_4WdCRJw2vdtdQYCoRae2XnaycGnQ0csCWYk_sZCnVQseV1olkbnOh0MnZs5buQVC4Xgb3D8UkNyf_zYci_gOmvLj0ylfYckPlKMeeKoY52WGu4JhYRaaR7Vpu0qpbEA5LyBehdfXnaVBjkDwUXkmtudLdO5Ssfj9n7kMWwsUnSwRj0cUTblfqcPZrIj9eQvOt-0F8f3QiCsffm5J6WNSoE9uBa1WdEBhQnRYUaps1tRWekRRQ0Qwiv5JRcQZfax2__zdgKWu3yenAlcGlvMrcHff-lvlIOTHA1YWgWNKy4UvV48sajuaASzPaR2W8sLBDRKgFkg76nKnUHV4aNn600W7OL2ifUiZdUgDi1yZPftc9FTy9QPdIvcaf3HjHPB6B2i_5HN-uUifcz1sRyrYaV5PoSTldMqVGoYR_PBcbK69W__qJZHojaE11tRBkmanw29NdAXwc2gHHzWhmEO6FAMdy3OkAkWCqUGj0WH0mx7vTb11wLgAhyJ4KfDDiHo5DX1Ucw4bkqzm8Fd3YL8R0F60abiDVbz9Gsbmdh4hXzrL7h8YQ4gOKs9ldDdMivlnlWiuknjeGPpvuQ_cb7NEI3IqME-hHdrTea3hj5xPVB1_3wQ6x4p2nIc2zHcmhKIEmG1xwVPisky=w939-h544-no');"></div>
+        <div class="container">
+          <div class="row justify-content-end text-md-dark">
+            <div class="col-md-7">
+              <h3>雪山</h3>
+              <p>雪山標高 3,886 公尺，屬於雪山山脈，為全台灣第二高峰，僅次於玉山山脈的玉山主峰（3,952 公尺），在日治時代被稱做次高山，是兩座超越富士山高度的台灣山脈之一。在台灣百岳之中，雪山與玉山、秀姑巒山、南湖大山、北大武山合稱「五岳」，為台灣最具代表性的五座高山之一。</p>
+              <a href="#" class="btn btn-outline-info">閱讀更多</a>
+              <div class="row mt-5">
+                <div class="col-md-6">
+                  <h4>雪山主峰</h4>
+                  <p>雪山主峰標高3,886公尺，峰頂地形平緩，設有一等三角點與石碑。雪山的地質構造以變質砂岩為主，在主峰周邊各處均可見變質砂岩的交疊構造出露，以及散落的風化砂岩碎塊。主峰東面為雪山一號圈谷，北面經埡口接上北稜角，西面稜脈接上翠池三叉山，南面則為斷崖崩壁。</p>
+                </div>
+                <div class="col-md-6">
+                  <h4>北稜角</h4>
+                  <p>雪山主峰北稜角為主峰北邊的山塊，海拔高度3,880公尺，與主峰相距甚近，高度相仿，因此普遍不以副峰視之。北稜角與主峰間隔著一處埡口，該埡口即為一號圈谷與四號圈谷的分壁，可能是冰河發育所造成的冰蝕構造。</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
