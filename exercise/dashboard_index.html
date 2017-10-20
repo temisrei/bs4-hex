@@ -82,7 +82,7 @@
       </div>
     </div>
 
-    <div class="row">
+    <div class="row mb-4">
       <section class="col-lg-8">
         <div class="card round-0">
           <div class="card-header">
@@ -122,7 +122,73 @@
         </div>
       </section>
     </div>
-    
+
+    <div class="card round-0">
+      <div class="card-header">
+        表頭
+      </div>
+      <div class="card-body">
+        <div class="d-flex">
+          <div class="form-inline">
+            <div class="form-group">
+              <label for="month" class="sr-only">月份</label>
+              <select name="month" id="month" class="form-control form-control-sm">
+                <option value="9">九月</option>
+                <option value="10">十月</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="ml-auto">
+            <a href="#" class="btn btn-outline-secondary btn-sm">下載報表</a>
+            <a href="#" class="btn btn-outline-secondary btn-sm">訂單管理</a>
+          </div>
+        </div>
+
+        <table class="table table-responsive">
+          <thead>
+            <tr>
+              <th>來源</th>
+              <th>姓名</th>
+              <th>貨品</th>
+              <th width="100">價格</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Youtube</td>
+              <td>喜多郎</td>
+              <td>六角和牛排</td>
+              <td class="text-right">3,000</td>
+            </tr>
+            <tr>
+              <td>Youtube</td>
+              <td>喜多郎</td>
+              <td>六角喜餅</td>
+              <td class="text-right">2,000</td>
+            </tr>
+            <tr>
+              <td>Youtube</td>
+              <td>喜多郎</td>
+              <td>六角雞胸</td>
+              <td class="text-right">1,500</td>
+            </tr>
+            <tr>
+              <td>Youtube</td>
+              <td>喜多郎</td>
+              <td>六角可愛 T Shirt</td>
+              <td class="text-right">2,000</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3" class="text-right">總營收</td>
+              <td class="text-right">10,500</td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
 
   </div>
 
