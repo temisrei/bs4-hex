@@ -38,14 +38,16 @@
     <div class="row">
       <div class="col-lg-3">
         <div class="input-group">
-          <input type="text" class="form-control"
-            placeholder="Search for..." aria-label="Search for..."
-            data-toggle="tooltip" data-placement="top" data-html="true"
-            title="<em>按下 Enter 進行搜尋</em>">
+          <input type="text" class="form-control" placeholder="Search for..." aria-label="Search for..." data-toggle="tooltip" data-placement="top" data-html="true" title="<em>按下 Enter 進行搜尋</em>">
           <span class="input-group-btn">
             <button class="btn btn-secondary" type="button">Go!</button>
           </span>
         </div>
+      </div>
+      <div class="col-lg-9 text-right">
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-title="快速下單" data-target="#editModal">
+          <i class="fa fa-shopping-cart"></i> 快速下單
+        </button>
       </div>
     </div>
 
@@ -75,7 +77,7 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
               <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-backdrop="static" data-title="編輯 超纖細肥皂 1盒 訂單">編輯</button>
               <button type="button" class="btn btn-outline-secondary">查看</button>
-    
+
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   ...
@@ -105,7 +107,7 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
               <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-backdrop="static" data-title="編輯 (保證)無泡泡沐浴乳 5罐 訂單">編輯</button>
               <button type="button" class="btn btn-outline-secondary">查看</button>
-    
+
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   ...
@@ -131,7 +133,7 @@
             <div class="btn-group btn-group-sm" role="group" aria-label="Button group with nested dropdown">
               <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#editModal" data-backdrop="static" data-title="編輯 防滑燈罩 100個 訂單">編輯</button>
               <button type="button" class="btn btn-outline-secondary">查看</button>
-    
+
               <div class="btn-group" role="group">
                 <button id="btnGroupDrop1" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   ...
@@ -173,9 +175,47 @@
 
   </div>
 
+  <!-- Edit Modal -->
+  <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-
-
+  <!-- Remove Modal -->
+  <div class="modal fade" id="removeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header bg-danger text-white">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-outline-danger">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <!-- Optional JavaScript -->
@@ -191,11 +231,21 @@
 
       // 編輯的 Modal 事件
       $('#editModal').on('show.bs.modal', function (event) {
+        var btn = $(event.relatedTarget);
+        // console.log(btn);
+        var title = btn.data("title");
+        // console.log(title);
 
+        var modal = $(this);
+        modal.find('.modal-title').text(title);
       });
 
       $('#removeModal').on('show.bs.modal', function (event) {
+        var btn = $(event.relatedTarget);
+        var title = btn.data("title");
 
+        var modal = $(this);
+        modal.find('.modal-title').text('確認 ' + title);
       })
     });
   </script>
